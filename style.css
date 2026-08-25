@@ -3,8 +3,10 @@ Theme Name: mhdferdiansyah.blog
 Author: Muhammad Ferdiansyah
 Author URI: https://linkedin.com/in/mhdferdiansyah
 Requires PHP: 7.4
-*/
 
+Cleaned/refactored stylesheet.
+Original visual configuration and responsive rules are preserved.
+*/
 :root {
   --fm-bg: #ffffff;
   --fm-surface: #f7f7f5;
@@ -907,44 +909,6 @@ textarea {
   right: 0;
 }
 
-@media (max-width: 700px) {
-  .posts-archive__tools {
-    display: block;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-  }
-
-  .posts-search {
-    max-width: none;
-    margin-bottom: 20px;
-  }
-
-  .posts-search input {
-    height: 40px;
-  }
-
-  .posts-search button {
-    height: 40px;
-    padding: 0 14px;
-  }
-
-  .posts-categories {
-    flex-wrap: nowrap;
-    gap: 20px;
-    overflow-x: auto;
-    padding-bottom: 6px;
-    scrollbar-width: none;
-  }
-
-  .posts-categories::-webkit-scrollbar {
-    display: none;
-  }
-
-  .posts-category {
-    flex-shrink: 0;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1241,123 +1205,6 @@ textarea {
   transform: translateX(5px);
 }
 
-@media (max-width: 700px) {
-  .about-page {
-    padding: 42px 0 55px;
-  }
-
-  .about-intro {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding-bottom: 48px;
-  }
-
-  .about-intro__image {
-    width: 180px;
-  }
-
-  .about-intro__photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-  }
-
-  .about-intro__title {
-    font-size: 40px;
-  }
-
-  .about-intro__lead {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .about-intro__text {
-    margin-top: 14px;
-  }
-
-  .about-social {
-    gap: 15px;
-    margin-top: 20px;
-  }
-
-  .about-section {
-    padding-top: 34px;
-  }
-
-  .about-section + .about-section {
-    margin-top: 36px;
-  }
-
-  .about-section__heading {
-    gap: 14px;
-    margin-bottom: 26px;
-  }
-
-  .about-section__heading h2 {
-    font-size: 25px;
-  }
-
-  .experience-company {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
-
-  .experience-company__header h3 {
-    font-size: 19px;
-  }
-
-  .experience-company__type,
-  .experience-company__location {
-    font-size: 13px;
-  }
-
-  .experience-roles {
-    margin-top: 15px;
-    margin-left: 4px;
-  }
-
-  .experience-role {
-    grid-template-columns: 18px 1fr;
-    gap: 12px;
-    padding-bottom: 16px;
-  }
-
-  .experience-role__top {
-    display: block;
-  }
-
-  .experience-role h4 {
-    font-size: 17px;
-  }
-
-  .experience-role time {
-    display: block;
-    margin-top: 2px;
-    font-size: 13px;
-  }
-
-  .experience-role__duration {
-    font-size: 12px;
-  }
-
-  .experience-role__description {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .education-item {
-    padding: 17px 0;
-  }
-
-  .education-item h3 {
-    font-size: 18px;
-  }
-
-  .education-item p {
-    font-size: 14px;
-  }
-}
-
 .home-intro {
   width: min(calc(100% - 40px), var(--fm-wide));
   margin: 0 auto;
@@ -1497,47 +1344,6 @@ textarea {
   opacity: 1;
 }
 
-@media (max-width: 700px) {
-  .home-intro {
-    width: min(calc(100% - 28px), var(--fm-wide));
-
-    padding: 68px 0 70px;
-
-    display: block;
-  }
-
-  .home-sidebar {
-    margin-top: 60px;
-    padding-top: 30px;
-
-    border-top: 1px solid var(--fm-border);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-
-  .home-sidebar__block {
-    padding-bottom: 0;
-  }
-
-  .home-sidebar__block + .home-sidebar__block {
-    padding-top: 0;
-    border-top: 0;
-  }
-
-  .home-posts {
-    width: min(calc(100% - 28px), var(--fm-max));
-  }
-  .home-archive__item {
-    font-size: 14px;
-  }
-
-  .home-learner strong {
-    font-size: 24px;
-  }
-}
-
 .fm-intro__link,
 .fm-section-heading__link {
   position: relative;
@@ -1641,9 +1447,205 @@ textarea {
 }
 
 @media (max-width: 700px) {
+  .posts-archive__tools {
+    display: block;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .posts-search {
+    max-width: none;
+    margin-bottom: 20px;
+  }
+
+  .posts-search input {
+    height: 40px;
+  }
+
+  .posts-search button {
+    height: 40px;
+    padding: 0 14px;
+  }
+
+  .posts-categories {
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+
+  .posts-categories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .posts-category {
+    flex-shrink: 0;
+  }
+
+  .about-page {
+    padding: 42px 0 55px;
+    width: 100%;
+  }
+
+  .about-intro {
+    display: block;
+    padding-bottom: 46px;
+  }
+
+  .about-intro__image {
+    display: none !important;
+  }
+
+  .about-intro__content {
+    min-width: 0;
+  }
+
+  .about-intro__title {
+    max-width: none;
+    font-size: clamp(38px, 10vw, 46px);
+  }
+
+  .about-intro__lead {
+    max-width: none;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .about-intro__text {
+    max-width: none;
+  }
+
+  .about-social {
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .about-section {
+    padding-top: 32px;
+  }
+
+  .about-section + .about-section {
+    margin-top: 34px;
+  }
+
+  .about-section__heading {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .about-section__heading h2 {
+    font-size: 24px;
+  }
+
+  .experience-company {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .experience-company__header h3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+
+  .experience-company__type,
+  .experience-company__location {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .experience-roles {
+    margin-top: 14px;
+    margin-left: 0;
+  }
+
+  .experience-role {
+    grid-template-columns: 16px 1fr;
+    gap: 10px;
+    padding-bottom: 14px;
+  }
+
+  .experience-role__top {
+    display: block;
+  }
+
+  .experience-role h4 {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+
+  .experience-role time {
+    display: block;
+    margin-top: 2px;
+    font-size: 13px;
+  }
+
+  .experience-role__duration {
+    font-size: 12px;
+  }
+
+  .experience-role__description {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .education-item {
+    padding: 17px 0;
+  }
+
+  .education-item h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .education-item p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .home-intro {
+    width: min(calc(100% - 28px), var(--fm-wide));
+    padding: 68px 0 65px;
+    display: block;
+  }
+
+  .home-sidebar {
+    margin-top: 52px;
+    padding-top: 26px;
+    border-top: 1px solid var(--fm-border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    grid-template-rows: auto auto;
+    column-gap: 24px;
+    row-gap: 18px;
+  }
+
+  .home-sidebar__block {
+    padding-bottom: 0;
+  }
+
+  .home-sidebar__block + .home-sidebar__block {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .home-posts {
+    width: min(calc(100% - 28px), var(--fm-max));
+  }
+
+  .home-archive__item {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+
+  .home-learner strong {
+    font-size: 23px;
+  }
+
   .experience-company--single-role .experience-roles {
     margin-left: 0;
-    margin-top: 15px;
+    margin-top: 14px;
   }
 
   .experience-company--single-role .experience-role {
@@ -1665,6 +1667,7 @@ textarea {
 
   .experience-company--single-role .experience-role h4 {
     font-size: 17px;
+    line-height: 1.3;
   }
 
   .experience-company--single-role .experience-role time {
@@ -1676,13 +1679,12 @@ textarea {
   .experience-company--single-role .experience-role__duration {
     font-size: 12px;
   }
-}
 
-@media (max-width: 700px) {
   body {
     font-size: 16px;
     line-height: 1.65;
   }
+
   .site-main {
     width: min(calc(100% - 28px), var(--fm-max));
   }
@@ -1714,15 +1716,6 @@ textarea {
   .main-menu a {
     font-size: 13px;
     white-space: nowrap;
-  }
-
-  .header-actions {
-    gap: 2px;
-  }
-
-  .header-action {
-    width: 26px;
-    height: 26px;
   }
 
   .header-actions {
@@ -1894,183 +1887,33 @@ textarea {
     align-self: flex-start;
   }
 
-  .about-page {
-    width: 100%;
-    padding: 42px 0 55px;
-  }
-
-  .about-intro {
-    grid-template-columns: 105px 1fr;
-    gap: 20px;
-    padding-bottom: 46px;
-  }
-
-  .about-intro__image {
-    width: 105px;
-    height: 105px;
-  }
-
-  .about-intro__photo {
-    width: 100%;
-    height: 100%;
-  }
-
-  .about-intro__title {
-    max-width: none;
-    font-size: clamp(38px, 10vw, 46px);
-  }
-
-  .about-intro__lead {
-    font-size: 16px;
-    line-height: 1.65;
-  }
-
-  .about-social {
-    gap: 14px;
-  }
-
-  .about-section {
-    padding-top: 32px;
-  }
-
-  .about-section + .about-section {
-    margin-top: 34px;
-  }
-
-  .about-section__heading {
-    margin-bottom: 24px;
-  }
-
-  .about-section__heading h2 {
-    font-size: 24px;
-  }
-
-  .experience-company {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
-
-  .experience-company__header h3 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-
-  .experience-company__type,
-  .experience-company__location {
-    font-size: 13px;
-    line-height: 1.45;
-  }
-
-  .experience-roles {
-    margin-top: 14px;
-    margin-left: 0;
-  }
-
-  .experience-role {
-    grid-template-columns: 16px 1fr;
-    gap: 10px;
-    padding-bottom: 14px;
-  }
-
-  .experience-role__top {
-    display: block;
-  }
-
-  .experience-role h4 {
-    font-size: 17px;
-    line-height: 1.25;
-  }
-
-  .experience-role time {
-    display: block;
-    margin-top: 2px;
-    font-size: 13px;
-  }
-
-  .experience-role__duration {
-    font-size: 12px;
-  }
-
-  .experience-role__description {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .experience-company--single-role .experience-roles {
-    margin-left: 0;
-    margin-top: 14px;
-  }
-
-  .experience-company--single-role .experience-role {
-    display: block;
-    padding-bottom: 0;
-  }
-
   .experience-company--single-role .experience-role__marker,
   .experience-company--single-role .experience-role::before {
     display: none;
-  }
-
-  .experience-company--single-role .experience-role__top {
-    display: block;
-  }
-
-  .experience-company--single-role .experience-role h4 {
-    font-size: 17px;
-    line-height: 1.3;
-  }
-
-  .experience-company--single-role .experience-role time {
-    display: block;
-    margin-top: 3px;
-    font-size: 13px;
-  }
-
-  .education-item {
-    padding: 17px 0;
-  }
-
-  .education-item h3 {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-
-  .education-item p {
-    font-size: 14px;
-    line-height: 1.5;
   }
 
   .education-item time {
     font-size: 13px;
   }
 
-  .home-intro {
-    width: min(calc(100% - 28px), var(--fm-wide));
-    padding: 68px 0 65px;
+  .home-sidebar__block:first-child {
+    grid-column: 1;
+    grid-row: 1 / span 2;
   }
 
-  .home-sidebar {
-    margin-top: 52px;
-    padding-top: 26px;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+  .home-sidebar__learner {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .home-learner {
+    grid-column: 2;
+    grid-row: 2;
+    gap: 6px;
   }
 
   .home-sidebar__label {
     font-size: 12px;
-  }
-
-  .home-archive__item {
-    padding: 6px 0;
-    font-size: 14px;
-  }
-
-  .home-learner {
-    gap: 6px;
-  }
-
-  .home-learner strong {
-    font-size: 23px;
   }
 
   .home-learner span {
@@ -2081,11 +1924,9 @@ textarea {
     width: min(calc(100% - 28px), var(--fm-max));
     margin-top: 55px;
     padding: 24px 0 32px;
-
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
-
     line-height: 1.5;
   }
 
