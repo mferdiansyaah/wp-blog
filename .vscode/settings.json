@@ -1,0 +1,6 @@
+{
+    "intelephense.environment.includePaths": [
+        "../../../"
+    ],
+    "editor.formatOnSave": true
+}
