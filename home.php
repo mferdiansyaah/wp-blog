@@ -99,15 +99,17 @@ get_header();
 					1259
 				);
 
-				if ($learner_count >= 1000) {
-					echo esc_html(
-						floor($learner_count / 100) / 10 . 'k'
-					);
+				if ($learner_count >= 1000000000) {
+					$learner_display = floor($learner_count / 100000000) / 10 . 'B';
+				} elseif ($learner_count >= 1000000) {
+					$learner_display = floor($learner_count / 100000) / 10 . 'M';
+				} elseif ($learner_count >= 1000) {
+					$learner_display = floor($learner_count / 100) / 10 . 'k';
 				} else {
-					echo esc_html(
-						number_format_i18n($learner_count)
-					);
+					$learner_display = number_format_i18n($learner_count);
 				}
+
+				echo esc_html($learner_display);
 				?>
 			</strong>
 			<span>
