@@ -92,16 +92,22 @@ get_header();
 			</p>
 		</div>
 		<div class="home-learner">
-
 			<strong>
 				<?php
 				$learner_count = get_theme_mod(
 					'mhdferdiansyah_blog_learner_count',
 					1259
 				);
-				echo esc_html(
-					number_format_i18n($learner_count)
-				);
+
+				if ($learner_count >= 1000) {
+					echo esc_html(
+						floor($learner_count / 100) / 10 . 'k'
+					);
+				} else {
+					echo esc_html(
+						number_format_i18n($learner_count)
+					);
+				}
 				?>
 			</strong>
 			<span>
